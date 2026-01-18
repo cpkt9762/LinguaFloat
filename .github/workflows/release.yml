@@ -1,0 +1,98 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: macos-14
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Build Release
+        run: |
+          swift build -c release
+          
+      - name: Prepare App Bundle
+        run: |
+          # Create app bundle structure
+          APP_NAME="LinguaFloat"
+          APP_BUNDLE="dist/${APP_NAME}.app"
+          
+          mkdir -p "${APP_BUNDLE}/Contents/MacOS"
+          mkdir -p "${APP_BUNDLE}/Contents/Resources"
+          mkdir -p "${APP_BUNDLE}/Contents/Frameworks"
+          
+          # Copy binary
+          cp .build/release/LinguaFloat "${APP_BUNDLE}/Contents/MacOS/"
+          
+          # Create Info.plist
+          cat > "${APP_BUNDLE}/Contents/Info.plist" << EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>CFBundleExecutable</key>
+              <string>LinguaFloat</string>
+              <key>CFBundleIdentifier</key>
+              <string>com.pingzi.LinguaFloat</string>
+              <key>CFBundleName</key>
+              <string>LinguaFloat</string>
+              <key>CFBundleDisplayName</key>
+              <string>LinguaFloat</string>
+              <key>CFBundleVersion</key>
+              <string>${{ steps.version.outputs.VERSION }}</string>
+              <key>CFBundleShortVersionString</key>
+              <string>${{ steps.version.outputs.VERSION }}</string>
+              <key>CFBundlePackageType</key>
+              <string>APPL</string>
+              <key>LSMinimumSystemVersion</key>
+              <string>14.0</string>
+              <key>LSUIElement</key>
+              <true/>
+              <key>NSHighResolutionCapable</key>
+              <true/>
+              <key>NSAccessibilityUsageDescription</key>
+              <string>LinguaFloat needs accessibility permission to read selected text and simulate paste.</string>
+              <key>NSScreenCaptureUsageDescription</key>
+              <string>LinguaFloat needs screen capture permission for OCR translation.</string>
+          </dict>
+          </plist>
+          EOF
+          
+      - name: Create DMG
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          DMG_NAME="LinguaFloat-${VERSION}.dmg"
+          
+          # Create DMG
+          hdiutil create -volname "LinguaFloat" \
+            -srcfolder dist/LinguaFloat.app \
+            -ov -format UDZO \
+            "${DMG_NAME}"
+          
+          echo "DMG_NAME=${DMG_NAME}" >> $GITHUB_ENV
+          
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ${{ env.DMG_NAME }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
