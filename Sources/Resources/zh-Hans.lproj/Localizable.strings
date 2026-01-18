@@ -1,0 +1,157 @@
+/* General */
+"app.name" = "LinguaFloat";
+"button.cancel" = "取消";
+"button.confirm" = "确定";
+"button.close" = "关闭";
+"button.copy" = "复制";
+"button.retry" = "重试";
+"button.save" = "保存";
+"button.delete" = "删除";
+
+/* Menu Bar */
+"menu.translate" = "翻译";
+"menu.ocr" = "OCR 截图";
+"menu.history" = "历史记录";
+"menu.settings" = "设置...";
+"menu.about" = "关于 LinguaFloat";
+"menu.quit" = "退出 LinguaFloat";
+
+/* Settings - Tabs */
+"settings.tab.general" = "通用";
+"settings.tab.translation" = "翻译";
+"settings.tab.shortcuts" = "快捷键";
+"settings.tab.advanced" = "高级";
+"settings.tab.about" = "关于";
+
+/* Settings - General */
+"settings.general.autoLaunch" = "登录时自动启动";
+"settings.general.showInDock" = "在 Dock 中显示图标";
+"settings.general.hoverWord" = "启用悬停取词模式";
+"settings.general.hoverDelay" = "悬停延迟";
+
+/* Settings - Translation */
+"settings.translation.defaultEngine" = "默认翻译引擎";
+"settings.translation.smartDetection" = "智能语言检测";
+"settings.translation.defaultTarget" = "默认目标语言";
+"settings.translation.chineseToLanguage" = "中文内容翻译为";
+"settings.translation.autoSaveHistory" = "自动保存翻译历史";
+
+/* Settings - Shortcuts */
+"settings.shortcuts.translateSelection" = "翻译选中文本";
+"settings.shortcuts.ocrCapture" = "OCR 截图识别";
+"settings.shortcuts.showHistory" = "显示翻译历史";
+"settings.shortcuts.tripleSpace" = "启用三连空格触发翻译";
+"settings.shortcuts.translationRange" = "无选中时翻译范围";
+"settings.shortcuts.range.entireField" = "整个输入框";
+"settings.shortcuts.range.currentSentence" = "光标所在句子/段落";
+"settings.shortcuts.range.lastLine" = "最后一行";
+"settings.shortcuts.permissionRequired" = "需要授予「输入监控」和「辅助功能」权限";
+
+/* Settings - Advanced */
+"settings.advanced.autoCopyOCR" = "自动复制 OCR 识别结果";
+"settings.advanced.animations" = "启用动画效果";
+"settings.advanced.autoDismiss" = "自动关闭浮层";
+"settings.advanced.clearHistory" = "清除所有翻译历史";
+"settings.advanced.resetSettings" = "重置所有设置";
+
+/* History */
+"history.title" = "翻译历史";
+"history.tab.all" = "全部";
+"history.tab.favorites" = "收藏";
+"history.search.placeholder" = "搜索原文或译文...";
+"history.empty" = "暂无翻译历史";
+"history.noResults" = "未找到匹配结果";
+"history.clearSearch" = "清除搜索";
+"history.export" = "导出";
+"history.exportTitle" = "导出历史记录";
+"history.exportDescription" = "将翻译历史导出为 JSON 文件";
+"history.exportSuccess" = "导出成功";
+"history.exportFailed" = "导出失败";
+
+/* History - Filters */
+"history.filter.source" = "来源";
+"history.filter.allSources" = "全部来源";
+"history.filter.selection" = "选中文本";
+"history.filter.ocr" = "OCR 识别";
+"history.filter.manual" = "手动输入";
+"history.filter.engine" = "引擎";
+"history.filter.allEngines" = "全部引擎";
+
+/* History - Actions */
+"history.action.copyOriginal" = "复制原文";
+"history.action.copyTranslation" = "复制译文";
+"history.action.addFavorite" = "收藏";
+"history.action.removeFavorite" = "取消收藏";
+"history.action.delete" = "删除";
+
+/* Translation */
+"translation.translating" = "翻译中...";
+"translation.copied" = "已复制";
+"translation.playAudio" = "朗读";
+"translation.stopAudio" = "停止朗读";
+
+/* OCR */
+"ocr.capturing" = "请框选要识别的区域...";
+"ocr.recognizing" = "正在识别文字...";
+"ocr.noTextFound" = "未识别到文字";
+
+/* License */
+"license.title" = "许可证管理";
+"license.trialDays" = "剩余试用天数: %d";
+"license.type" = "许可证类型";
+"license.email" = "邮箱";
+"license.activatedAt" = "激活日期";
+"license.expiresAt" = "到期日期";
+"license.permanent" = "永久";
+"license.key" = "许可证密钥";
+"license.deactivate" = "取消激活";
+"license.activate" = "激活";
+"license.buyLicense" = "购买许可证";
+"license.enterEmail" = "邮箱地址";
+"license.enterKey" = "许可证密钥";
+"license.activated" = "许可证已成功激活";
+"license.type.trial" = "试用版";
+"license.type.personal" = "个人版";
+"license.type.professional" = "专业版";
+"license.type.lifetime" = "终身版";
+
+/* Errors */
+"error.networkUnavailable" = "网络不可用，请检查网络连接";
+"error.authenticationFailed" = "认证失败，请检查 API Key";
+"error.rateLimited" = "请求过于频繁，请稍后重试";
+"error.contentTooLong" = "内容过长，请缩短文本";
+"error.unsupportedLanguage" = "不支持的语言";
+"error.parseError" = "解析翻译结果失败";
+"error.screenshotFailed" = "截图失败";
+"error.noTextFound" = "未识别到文字";
+"error.permissionDenied" = "无截图权限，请在系统设置中授权";
+"error.cancelled" = "操作已取消";
+"error.license.invalidFormat" = "许可证格式无效，请检查输入";
+"error.license.invalidKey" = "许可证密钥无效";
+"error.license.alreadyActivated" = "此许可证已在其他设备激活";
+"error.license.networkError" = "网络错误，请检查网络连接";
+"error.license.serverError" = "服务器错误，请稍后重试";
+
+/* Languages */
+"language.auto" = "自动检测";
+"language.zh-CN" = "简体中文";
+"language.zh-TW" = "繁体中文";
+"language.en" = "英语";
+"language.ja" = "日语";
+"language.ko" = "韩语";
+"language.fr" = "法语";
+"language.de" = "德语";
+"language.es" = "西班牙语";
+
+/* Providers */
+"provider.google" = "Google 翻译";
+"provider.openai" = "OpenAI GPT";
+"provider.claude" = "Anthropic Claude";
+"provider.deepseek" = "DeepSeek";
+
+/* Permissions */
+"permission.accessibility" = "辅助功能权限";
+"permission.inputMonitoring" = "输入监控权限";
+"permission.granted" = "已授权";
+"permission.notGranted" = "未授权";
+"permission.authorize" = "授权";

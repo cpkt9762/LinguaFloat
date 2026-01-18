@@ -1,0 +1,28 @@
+# Build
+.build/
+Build/
+DerivedData/
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+*.dSYM
+*.app
+
+# Distribution
+dist/
+
+# Temporary
+*.log
+/tmp/

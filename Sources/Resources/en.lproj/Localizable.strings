@@ -1,0 +1,157 @@
+/* General */
+"app.name" = "LinguaFloat";
+"button.cancel" = "Cancel";
+"button.confirm" = "Confirm";
+"button.close" = "Close";
+"button.copy" = "Copy";
+"button.retry" = "Retry";
+"button.save" = "Save";
+"button.delete" = "Delete";
+
+/* Menu Bar */
+"menu.translate" = "Translate";
+"menu.ocr" = "OCR Capture";
+"menu.history" = "History";
+"menu.settings" = "Settings...";
+"menu.about" = "About LinguaFloat";
+"menu.quit" = "Quit LinguaFloat";
+
+/* Settings - Tabs */
+"settings.tab.general" = "General";
+"settings.tab.translation" = "Translation";
+"settings.tab.shortcuts" = "Shortcuts";
+"settings.tab.advanced" = "Advanced";
+"settings.tab.about" = "About";
+
+/* Settings - General */
+"settings.general.autoLaunch" = "Launch at login";
+"settings.general.showInDock" = "Show in Dock";
+"settings.general.hoverWord" = "Enable hover word detection";
+"settings.general.hoverDelay" = "Hover delay";
+
+/* Settings - Translation */
+"settings.translation.defaultEngine" = "Default translation engine";
+"settings.translation.smartDetection" = "Smart language detection";
+"settings.translation.defaultTarget" = "Default target language";
+"settings.translation.chineseToLanguage" = "Translate Chinese to";
+"settings.translation.autoSaveHistory" = "Auto save translation history";
+
+/* Settings - Shortcuts */
+"settings.shortcuts.translateSelection" = "Translate selection";
+"settings.shortcuts.ocrCapture" = "OCR capture";
+"settings.shortcuts.showHistory" = "Show history";
+"settings.shortcuts.tripleSpace" = "Enable triple space trigger";
+"settings.shortcuts.translationRange" = "Translation range when no selection";
+"settings.shortcuts.range.entireField" = "Entire field";
+"settings.shortcuts.range.currentSentence" = "Current sentence/paragraph";
+"settings.shortcuts.range.lastLine" = "Last line";
+"settings.shortcuts.permissionRequired" = "Requires Input Monitoring and Accessibility permissions";
+
+/* Settings - Advanced */
+"settings.advanced.autoCopyOCR" = "Auto copy OCR result";
+"settings.advanced.animations" = "Enable animations";
+"settings.advanced.autoDismiss" = "Auto dismiss panel";
+"settings.advanced.clearHistory" = "Clear all history";
+"settings.advanced.resetSettings" = "Reset all settings";
+
+/* History */
+"history.title" = "Translation History";
+"history.tab.all" = "All";
+"history.tab.favorites" = "Favorites";
+"history.search.placeholder" = "Search original or translated text...";
+"history.empty" = "No translation history";
+"history.noResults" = "No matching results";
+"history.clearSearch" = "Clear search";
+"history.export" = "Export";
+"history.exportTitle" = "Export History";
+"history.exportDescription" = "Export translation history as JSON file";
+"history.exportSuccess" = "Export successful";
+"history.exportFailed" = "Export failed";
+
+/* History - Filters */
+"history.filter.source" = "Source";
+"history.filter.allSources" = "All sources";
+"history.filter.selection" = "Selection";
+"history.filter.ocr" = "OCR";
+"history.filter.manual" = "Manual";
+"history.filter.engine" = "Engine";
+"history.filter.allEngines" = "All engines";
+
+/* History - Actions */
+"history.action.copyOriginal" = "Copy original";
+"history.action.copyTranslation" = "Copy translation";
+"history.action.addFavorite" = "Add to favorites";
+"history.action.removeFavorite" = "Remove from favorites";
+"history.action.delete" = "Delete";
+
+/* Translation */
+"translation.translating" = "Translating...";
+"translation.copied" = "Copied";
+"translation.playAudio" = "Play audio";
+"translation.stopAudio" = "Stop audio";
+
+/* OCR */
+"ocr.capturing" = "Select area to capture...";
+"ocr.recognizing" = "Recognizing text...";
+"ocr.noTextFound" = "No text found";
+
+/* License */
+"license.title" = "License Management";
+"license.trialDays" = "Trial days remaining: %d";
+"license.type" = "License type";
+"license.email" = "Email";
+"license.activatedAt" = "Activated on";
+"license.expiresAt" = "Expires on";
+"license.permanent" = "Permanent";
+"license.key" = "License key";
+"license.deactivate" = "Deactivate";
+"license.activate" = "Activate";
+"license.buyLicense" = "Purchase license";
+"license.enterEmail" = "Email address";
+"license.enterKey" = "License key";
+"license.activated" = "License activated successfully";
+"license.type.trial" = "Trial";
+"license.type.personal" = "Personal";
+"license.type.professional" = "Professional";
+"license.type.lifetime" = "Lifetime";
+
+/* Errors */
+"error.networkUnavailable" = "Network unavailable, please check your connection";
+"error.authenticationFailed" = "Authentication failed, please check API key";
+"error.rateLimited" = "Too many requests, please try again later";
+"error.contentTooLong" = "Content too long, please shorten the text";
+"error.unsupportedLanguage" = "Unsupported language";
+"error.parseError" = "Failed to parse translation result";
+"error.screenshotFailed" = "Screenshot failed";
+"error.noTextFound" = "No text recognized";
+"error.permissionDenied" = "Permission denied, please authorize in System Settings";
+"error.cancelled" = "Operation cancelled";
+"error.license.invalidFormat" = "Invalid license format, please check input";
+"error.license.invalidKey" = "Invalid license key";
+"error.license.alreadyActivated" = "License already activated on another device";
+"error.license.networkError" = "Network error, please check connection";
+"error.license.serverError" = "Server error, please try again later";
+
+/* Languages */
+"language.auto" = "Auto detect";
+"language.zh-CN" = "Simplified Chinese";
+"language.zh-TW" = "Traditional Chinese";
+"language.en" = "English";
+"language.ja" = "Japanese";
+"language.ko" = "Korean";
+"language.fr" = "French";
+"language.de" = "German";
+"language.es" = "Spanish";
+
+/* Providers */
+"provider.google" = "Google Translate";
+"provider.openai" = "OpenAI GPT";
+"provider.claude" = "Anthropic Claude";
+"provider.deepseek" = "DeepSeek";
+
+/* Permissions */
+"permission.accessibility" = "Accessibility permission";
+"permission.inputMonitoring" = "Input monitoring permission";
+"permission.granted" = "Granted";
+"permission.notGranted" = "Not granted";
+"permission.authorize" = "Authorize";
